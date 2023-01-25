@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500&family=Sofia+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: 20px;
+}
+
+header {
+    padding: 20px;
+    background-color: #192341;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav :hover {
+    text-decoration: underline;
+    color: rgb(97, 90, 90);
+}
+
+a {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+body {
+    background-color: #23325a;
+    color: rgb(97, 90, 90);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: aliceblue;
+    margin: 20px;
+    text-align: center;
+    font-size: 3rem;
+    opacity: 0;
+    transition: 1s;
+    animation: show 3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.for {
+    color: aliceblue;
+    font-size: 2rem;
+    opacity: 0;
+    transition: 1s;
+    animation: show 3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.datamola {
+    color: aliceblue;
+    font-size: 3rem;
+    opacity: 0;
+    transition: 1s;
+    animation: show 3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+.logodatamola {
+    max-width: 200px;
+    opacity: 0;
+    transition: 1s;
+    animation: show 3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.wrapper.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media all and (max-width: 800px) {
+    .wrapper.logo {
+        flex-direction: column;
+    }
+}
+
+.wrapper.iam {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(49, 65, 109, 0.84);
+    border-radius: 3%;
+}
+
+.myphoto {
+    max-width: 480px;
+    border: aliceblue;
+    border-radius: 5%;
+}
+
+.description {
+    max-width: 600px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(190, 129, 129);
+    padding: 10px;
+}
+
+.wrapper.did {
+    display: flex;
+    flex-direction: column;
+}
+
+.did h2 {
+    padding: 20px;
+}
+
+.yearscolumn {
+    display: flex;
+    flex-direction: row;
+}
+
+.years {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100%/3);
+}
+
+.fa-solid {
+    font-size: 3rem;
+}
+
+.years p {
+    color: aliceblue;
+}
+
+@media all and (max-width: 500px) {
+    .yearscolumn {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+p {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    color: rgb(97, 90, 90);
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.social a :hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.hobbys {
+    background-color: rgba(49, 65, 109, 0.84);
+    border-radius: 3%;
+}
+
+.itemshobbys {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item {
+    border: 1px solid;
+    border-radius: 3%;
+    position: relative;
+    width: calc((100%)/3);
+    height: 300px;
+    padding: 5px;
+}
+
+.item::before {
+    content: "";
+    width: 100px;
+    height: 30px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    opacity: 50%;
+}
+
+.item:first-child::before {
+    content: "ZeroWaste";
+}
+
+.item:nth-of-type(2)::before {
+    content: "Video";
+}
+
+.item:nth-of-type(3)::before {
+    content: "English";
+}
+
+.item:nth-of-type(4)::before {
+    content: "Blog";
+}
+
+.item:nth-of-type(5)::before {
+    content: "Jute";
+}
+
+.item:nth-of-type(6)::before {
+    content: "Biathlone";
+}
+
+.item:hover::before {
+    transition-property: all;
+    width: auto;
+    height: auto;
+    transition-duration: 1s;
+    font-size: 20px;
+    opacity: 100%;
+}
+
+.item:hover:first-child::before {
+    content: "Внедряю в свою жизнь эко-привычки";
+}
+
+.item:hover:nth-of-type(2)::before {
+    content: "Сохраняю важные моменты жизни в видеоролики ";
+}
+
+.item:hover:nth-of-type(3)::before {
+    content: "Учу английский, еще не забыла немецкий";
+}
+
+.item:hover:nth-of-type(4)::before {
+    content: "Веду блог о прочитанных с дочкой книгах";
+}
+
+.item:hover:nth-of-type(5)::before {
+    content: "Вяжу из джута";
+}
+
+.item:hover:nth-of-type(6)::before {
+    content: "Болею за Анну Солу";
+}
+
+img .item.blog {
+    height: 100%;
+    width: auto;
+}
+
+@media screen and ( max-width: 1080px) {
+    .item {
+        width: calc((100%)/2);
+        height: 300px;
+    }
+}
+
+@media screen and ( max-width: 610px) {
+    .item {
+        width: calc((100%)/1);
+        height: 300px;
+    }
+}
+
+.why h2 {
+    padding-top: 20px;
+}
+
+span {
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: #192341;
+    border-radius: 5%;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+@media screen and ( max-width: 600px) {
+    .social {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.fa-solid.fa-phone-volume {
+    font-size: 2rem;
+    padding-right: 5px;
+}
+
+.fa-solid.fa-envelope-open-text {
+    font-size: 2rem;
+    padding-right: 5px;
+}
+
+.fa-telegram {
+    font-size: 2rem;
+    color: rgb(97, 90, 90);
+    padding-right: 5px;
+}
+
+.fa-instagram {
+    font-size: 2rem;
+    color: rgb(97, 90, 90);
+    padding-right: 5px;
+}
+
+.itemsocial {
+    padding: 10px;
+}
+
+.itemsocial p {
+    color: aliceblue;
+}
+
+@media screen and ( max-width: 700px) {
+    .itemsocial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.social a :hover {
+    transform: scale(1.3);
+    transition: 0.8s;
+}
